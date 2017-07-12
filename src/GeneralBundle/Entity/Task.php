@@ -45,7 +45,7 @@ class Task
     /**
      * @var int
      *
-     * @ORM\Column(name="prize", type="integer")
+     * @ORM\Column(name="prize", type="decimal", precision=11, scale=2)
      */
     private $prize;
     
@@ -164,7 +164,7 @@ class Task
      * @return string
      */
     
-    public function getCategory($category)
+    public function getCategory()
     {
         return $this->category;
     }
