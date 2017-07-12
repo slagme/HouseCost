@@ -3,6 +3,7 @@
 namespace GeneralBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Task
@@ -57,7 +58,6 @@ class Task
     
     private $category;
     
-
     /**
      * @var string
      *
@@ -65,7 +65,12 @@ class Task
      */
     private $addedBy;
 
-
+    /**
+     * @Assert\DateTime();
+     * 
+     */
+    private $addedOn;
+    
     /**
      * Get id
      *
@@ -213,5 +218,28 @@ class Task
     public function getAddedBy()
     {
         return $this->addedBy;
+    }
+    
+    /**
+     * Set addedOn
+     *
+     * @param string $addedOn
+     * @return Task
+     */
+    public function setAddedOn($addedOn)
+    {
+        $this->addedOn = $addedOn;
+
+        return $this;
+    }
+
+    /**
+     * Get addedOn
+     *
+     * @return string 
+     */
+    public function getAddedOn()
+    {
+        return $this->addedOn;
     }
 }
