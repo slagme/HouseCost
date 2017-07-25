@@ -73,3 +73,9 @@ fos_user:
     from_email:
         address: "mail@example.com"
         sender_name: "mail@example.com"
+        
+easy_admin:
+    entities:
+        - GeneralBundle\Entity\Task
+        
+                
