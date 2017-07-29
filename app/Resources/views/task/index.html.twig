@@ -6,14 +6,14 @@
     <table>
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Date</th>
-                <th>Place</th>
-                <th>Prize</th>
-                <th>Category</th>
-                <th>Addedby</th>
-                <th>Actions</th>
+                <th>Lp</th>
+                <th>Nazwa:</th>
+                <th>Data:</th>
+                <th>Miejsce:</th>
+                <th>Kwota:</th>
+                <th>Kategoria:</th>
+                <th>Dodane przez:</th>
+                <th>Opcje:</th>
             </tr>
         </thead>
         <tbody>
@@ -21,7 +21,7 @@
             <tr>
                 <td><a href="{{ path('task_show', { 'id': task.id }) }}">{{ task.id }}</a></td>
                 <td>{{ task.name }}</td>
-                <td>{% if task.date %}{{ task.date|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if task.date %}{{ task.date|date('d-m-Y') }}{% endif %}</td>
                 <td>{{ task.place }}</td>
                 <td>{{ task.prize }}</td>
                 <td>{{ task.category }}</td>
