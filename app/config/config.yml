@@ -67,13 +67,12 @@ swiftmailer:
     spool: { type: memory }
 
 fos_user:
-    db_driver: orm
+    db_driver: orm # other valid values are 'mongodb' and 'couchdb'
     firewall_name: main
-    user_class: AppBundle\Entity\User
+    user_class: GeneralBundle\Entity\User
     from_email:
-        address: "mail@example.com"
-        sender_name: "mail@example.com"
-        
+        address: "example@example.com"
+        sender_name: "DemoAdmin"        
 easy_admin:
     entities:
         - GeneralBundle\Entity\Task
