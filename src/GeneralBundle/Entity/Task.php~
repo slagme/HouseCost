@@ -64,6 +64,12 @@ class Task
      * @ORM\Column(name="addedBy", type="string", length=20)
      */
     private $addedBy;
+
+    /**
+     * @Assert\DateTime();
+     * 
+     */
+    private $addedOn;
     
     /**
      * Get id
@@ -212,28 +218,5 @@ class Task
     public function getAddedBy()
     {
         return $this->addedBy;
-    }
-    
-    /**
-     * Set addedOn
-     *
-     * @param string $addedOn
-     * @return Task
-     */
-    public function setAddedOn($addedOn)
-    {
-        $this->addedOn = $addedOn;
-
-        return $this;
-    }
-
-    /**
-     * Get addedOn
-     *
-     * @return string 
-     */
-    public function getAddedOn()
-    {
-        return $this->addedOn;
     }
 }
