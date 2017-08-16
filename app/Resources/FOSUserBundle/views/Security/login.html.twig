@@ -15,11 +15,11 @@
     <form action="{{ path("fos_user_security_check") }}" method="post" class="form-signin">
         <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
 
-        <h2 class="form-signin-heading">Please sign in</h2>
+        <h2 class="form-signin-heading">Zaloguj się</h2>
         <label for="username" class="sr-only">{{ 'security.login.username'|trans }}</label>
-        <input type="text" id="username" name="_username" value="{{ last_username }}" placeholder="Username" class="form-control" required autofocus />
+        <input type="text" id="username" name="_username" value="{{ last_username }}" placeholder="Nazwa użytkownika" class="form-control" required autofocus />
         <label for="password" class="sr-only">{{ 'security.login.password'|trans }}</label>
-        <input type="password" id="password" name="_password" class="form-control" placeholder="Password" required />
+        <input type="password" id="password" name="_password" class="form-control" placeholder="Hasło" required />
         <div class="checkbox">
             <label>
                 <input type="checkbox"
